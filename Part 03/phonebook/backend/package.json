@@ -1,0 +1,33 @@
+{
+  "name": "phonebook",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rmdir /s /q dist & cd ../frontend && npm run build && xcopy dist ..\\backend\\dist\\ /s /e",
+    "deploy": "fly deploy",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "logs:prod": "fly logs",
+    "lint": "eslint ."
+  },
+  "author": "Neculae Andrei-Fabian",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.4",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "@flydotio/dockerfile": "^0.5.7",
+    "@stylistic/eslint-plugin-js": "^2.1.0",
+    "eslint": "^9.2.0",
+    "globals": "^15.2.0",
+    "nodemon": "^3.1.0"
+  }
+}

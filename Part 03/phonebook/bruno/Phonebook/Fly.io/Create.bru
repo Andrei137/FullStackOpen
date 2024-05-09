@@ -1,0 +1,18 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://phonebook13.fly.dev/api/persons
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Test",
+    "number": "123"
+  }
+}
