@@ -1,0 +1,20 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3001/api/blogs
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Hello I am a silly blog",
+    "author": "Jhon Doe",
+    "url": "http://example.com",
+    "likes": 13
+  }
+}
